@@ -1,10 +1,8 @@
 {
-  "name": "lp-pwa-module-boilerplate",
+  "name": "@geins/ralph-module-klaviyo",
   "version": "1.0.0",
-  "description": "Boilerplate for creating a module for Geins PWA strorefront",
-  "author": {
-    "name": "arvidsson-geins"
-  },
+  "description": "Klaviyo module for Geins PWA Storefront Ralph",
+  "author": "arvidsson-geins",
   "keywords": [
     "vue",
     "nuxt",
@@ -15,6 +13,8 @@
   "scripts": {
     "dev": "nuxt test/fixture",
     "test": "jest",
+    "publish": "npm publish --access public",
+    "link": "sudo npm link",
     "test:unit": "jest --testRegex \"/test/unit/(.+)\\.test\\.js$\"",
     "test:system": "jest --testRegex \"/test/system/(.+)\\.test\\.js$\"",
     "test:coverage": "yarn test --coverage",
@@ -32,7 +32,5 @@
       "lib/**/*.{js,jsx}"
     ]
   },
-  "dependencies": {
-    "consola": "^2.3.2"
-  }
+  "dependencies": {}
 }
