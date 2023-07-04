@@ -1,4 +1,4 @@
-# lp-pwa-module-boilerplate
+# ralph-module-klaviyo
 
 Boilerplate for creating a module for Geins PWA storefront
 
