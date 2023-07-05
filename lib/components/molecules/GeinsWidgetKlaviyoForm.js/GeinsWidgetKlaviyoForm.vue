@@ -5,7 +5,7 @@
 </template>
 <script>
 /* 
-  Streamify Live Shopping Player
+  Klaviyo consent form
 */
 
 export default {
