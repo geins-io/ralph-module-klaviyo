@@ -5,12 +5,12 @@
 </template>
 <script>
 /* 
-  Streamify Live Shopping Player
+  Klaviyo consent form
 */
 
 export default {
     name: 'GeinsKlaviyoForm',
-    mixins: [MixAddToCart],
+    mixins: [],
     props: {},
     data: () => ({}),
     computed: {},
@@ -19,4 +19,7 @@ export default {
     methods: {}
 };
 </script>
+<style lang="scss">
+@import './geins-klaviyo-form.scss';
+</style>
   

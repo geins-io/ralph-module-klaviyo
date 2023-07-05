@@ -1,6 +1,6 @@
 <template>
     <div class="geins-widget-klaviyo-form">
-        <GeinsWidgetKlaviyoForm />
+        <GeinsKlaviyoForm />
     </div>
 </template>
 <script>
@@ -10,7 +10,7 @@
 
 export default {
     name: 'GeinsWidgetKlaviyoForm',
-    mixins: [MixAddToCart],
+    mixins: [],
     props: {},
     data: () => ({}),
     computed: {},
