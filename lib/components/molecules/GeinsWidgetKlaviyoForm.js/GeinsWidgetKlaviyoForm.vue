@@ -1,6 +1,6 @@
 <template>
     <div class="geins-widget-klaviyo-form">
-        <GeinsKlaviyoForm />
+        <GeinsKlaviyoForm :formId="formId" />
     </div>
 </template>
 <script>
@@ -11,11 +11,23 @@
 export default {
     name: 'GeinsWidgetKlaviyoForm',
     mixins: [],
-    props: {},
+    props: {
+        // Configuration object to the widget to set properties
+        configuration: {
+            type: Object,
+            required: false
+        },
+    },
     data: () => ({}),
-    computed: {},
+    computed: {
+        formId() {
+            return this.configuration?.id ?? '';
+        }
+    },
     watch: {},
-    async mounted() { },
+    async mounted() { 
+        console.log('vidar config',this.configuration)
+    },
     methods: {}
 };
 </script>
