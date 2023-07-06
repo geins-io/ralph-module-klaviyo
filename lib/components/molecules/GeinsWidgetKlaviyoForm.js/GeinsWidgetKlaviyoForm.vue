@@ -5,7 +5,7 @@
 </template>
 <script>
 /* 
-  Klaviyo consent form
+  Klaviyo sign-up form
 */
 
 export default {
@@ -25,9 +25,7 @@ export default {
         }
     },
     watch: {},
-    async mounted() { 
-        console.log('vidar config',this.configuration)
-    },
+    async mounted() {},
     methods: {}
 };
 </script>

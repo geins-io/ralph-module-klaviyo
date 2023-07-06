@@ -3,7 +3,7 @@
 </template>
 <script>
 /* 
-  Klaviyo consent form
+  Klaviyo sign-up form
 */
 
 export default {
