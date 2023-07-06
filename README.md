@@ -37,10 +37,39 @@ Add the module to your Geins PWA Storefront Ralph by adding the following line t
           enabled: true,
           debug: true,
           companyId: 'your-klaviyo-site-id'
-          apiKey: 'your-private-klaviyo-api-key'
       }
     ]
   ]
+```
+
+### To use with Geins CMS with no coding
+
+#### 1. Add the module to your Geins PWA Storefront Ralph
+Use the [@geins/ralph-module-cms-json-container](https://www.npmjs.com/package/@geins/ralph-module-cms-json-container)
+
+```bash
+npm i @geins/ralph-module-cms-json-container
+```
+
+#### 2. Add the module to your Geins PWA Storefront Ralph
+
+Add module to your `nuxt.config.json` file:
+```js
+...
+    modules: [
+      '@geins/ralph-module-cms-json-container'
+    ]
+..
+``` 
+Set the `widgetRenderTypesComponents` in your `nuxt.config.json` file to use the `GeinsWidgetJsonContainer` component for the `JSON` widget type.
+```js
+...
+  publicRuntimeConfig: {
+      widgetRenderTypesComponents: {
+        JSON: 'GeinsWidgetJsonContainer'
+      },
+  }
+...
 ```
 
 ## Module Options
@@ -50,20 +79,51 @@ Add extra options to module configuration in `nuxt.config.json` file.
 |-|-|-|-|
 | enabled | `true` | Yes | Enables the module|
 | debug | `false` | No | Enables debug info to console |
-| companyId | none | Yes | Your Klaviyo Site ID [Klaviyo Account Sttings](https://www.klaviyo.com/settings/account/api-keys) |
-| apiKey | none | No | Your private Klaviyo API-key [Klaviyo Account Sttings](https://www.klaviyo.com/settings/account/api-keys)|
+| companyId | none | Yes | Your Klaviyo Site ID [Klaviyo Account Settings](https://www.klaviyo.com/settings/account/api-keys) |
 
-## Usage
+## Usage (event tracking)
 
 The module will track activity on your site related to your users.
 
 | Type of activity | Event tracked | Information tracked |
 |-|-|-|
-| Identify customer | User Login/Register, Newletter signup, Cart checkout | E-mail, telephone number |
+| Identify customer | User Login/Register, Newletter signup, Cart checkout | E-mail|
 | Viewed product | Product clicked, Product page viewed | Product name & ID |
 | Added to cart | Product added to cart | Product name & ID |
 | Checkout started | User clicks to checkout cart | Products in cart |
 | Purchase completed | User completes a purchase | All purchased products |
+
+## Usage (sign-up forms)
+
+Add a sign-up form to any desired page of your storefront. Either by cms or as a component. Add an id to the component to identify which Klaviyo form to render.
+
+Currently only `Embed` type forms are possible. [Read here about sign-up forms in Klaviyo](https://help.klaviyo.com/hc/en-us/articles/360026474752)
+
+## Components
+Module adds two components to your storefront. `GeinsKlaviyoForm` and `GeinsWidgetKlaviyoForm`.
+
+### GeinsKlaviyoForm
+This component is used to show a specific sign-up form from Klaviyo. It is used by the `GeinsWidgetKlaviyoForm` component. You can use it directly in your page if you want to add the player directly to your page as a component. If you 
+
+```vue
+<GeinsKlaviyoForm formId="your-form-id" />
+```
+
+### GeinsWidgetKlaviyoForm
+The widget is a wrapper around the `GeinsKlaviyoForm` component. It is used to add the component via CMS. It is not needed if you add the component directly to your page.
+
+#### Use with Geins CMS
+
+Add a `JSON Widget` to your page in the [Geins CMS](https://docs.geins.io/docs/launchpads/web/content). Add the following JSON to your widget. Replace `your-form-id` with the id of Klaviyo sing-up form you want to register. You can find the id in your Klaviyo dashboard (Sign-up forms).
+
+```json
+{
+  "renderWidget": "GeinsWidgetKlaviyoForm",
+  "data": {
+    "id": "your-form-id"
+  }
+}
+```
 
 ## User consent **(important!)**
 
