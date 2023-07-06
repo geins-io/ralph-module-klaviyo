@@ -29,4 +29,10 @@ export default {
     methods: {}
 };
 </script>
+<style lang="scss">
+.geins-widget-klaviyo-form {
+    padding: 24px 0px;
+}
+</style>
+```
   

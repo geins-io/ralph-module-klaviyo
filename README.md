@@ -91,8 +91,6 @@ The module will track activity on your site related to your users.
 | Viewed product | Product clicked, Product page viewed | Product name & ID |
 | Added to cart | Product added to cart | Product name & ID |
 | Checkout started | User clicks to checkout cart | Products in cart |
-| Purchase completed | User completes a purchase | All purchased products |
-
 ## Usage (sign-up forms)
 
 Add a sign-up form to any desired page of your storefront. Either by cms or as a component. Add an id to the component to identify which Klaviyo form to render.
