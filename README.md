@@ -32,7 +32,7 @@ Add the module to your Geins PWA Storefront Ralph by adding the following line t
 ...
   modules: [
     [
-      '@geins/ralph-module-streamify',
+      '@geins/ralph-module-klaviyo',
       {
           enabled: true,
           debug: true,
@@ -128,10 +128,10 @@ Add a `JSON Widget` to your page in the [Geins CMS](https://docs.geins.io/docs/l
 Klaviyo will only track customers activity if all cookies have been allowed. Please add information about Klaviyo's tracking on your `/cookies` page.
 
 
-[npm]: https://img.shields.io/npm/v/@geins/ralph-module-streamify
-[npm-url]: https://www.npmjs.com/package/@geins/ralph-module-streamify
-[npm-downloads-per-month]: https://img.shields.io/npm/dm/@geins/ralph-module-streamify.svg
-[npm-trends]: https://npmtrends.com/@geins/ralph-module-streamify
+[npm]: https://img.shields.io/npm/v/@geins/ralph-module-klaviyo
+[npm-url]: https://www.npmjs.com/package/@geins/ralph-module-klaviyo
+[npm-downloads-per-month]: https://img.shields.io/npm/dm/@geins/ralph-module-klaviyo.svg
+[npm-trends]: https://npmtrends.com/@geins/ralph-module-klaviyo
 [geins-docs-url]: https://docs.geins.io
 [geins-docs-img]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/geins-io/resources/master/sheilds/geins-docs-read-v3.json
 [geins-tiral-url]: https://www.geins.io
