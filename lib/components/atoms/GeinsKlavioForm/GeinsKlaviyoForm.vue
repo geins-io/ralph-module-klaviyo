@@ -1,7 +1,5 @@
 <template>
-    <div class="geins-klaviyo-form">
-        GeinsKlaviyoForm
-    </div>
+    <div :class="`klaviyo-form-${formId}`"></div>
 </template>
 <script>
 /* 
@@ -11,7 +9,12 @@
 export default {
     name: 'GeinsKlaviyoForm',
     mixins: [],
-    props: {},
+    props: {
+        formId: {
+            type: String,
+            default: ''
+        }
+    },
     data: () => ({}),
     computed: {},
     watch: {},
@@ -19,7 +22,4 @@ export default {
     methods: {}
 };
 </script>
-<style lang="scss">
-@import './geins-klaviyo-form.scss';
-</style>
   
